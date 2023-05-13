@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker1-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: app1
+  template:
+    metadata:
+      labels:
+        component: app1
+    spec:
+      containers:
+        - name: worker1
+          image: abadoom/worker1
+          ports:
+            - containerPort: 8000

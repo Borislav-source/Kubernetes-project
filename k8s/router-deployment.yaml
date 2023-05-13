@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: router-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: router
+  template:
+    metadata:
+      labels:
+        component: router
+    spec:
+      containers:
+        - name: router
+          image: abadoom/router
+          ports:
+            - containerPort: 8000
