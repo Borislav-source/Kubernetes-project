@@ -12,5 +12,5 @@ WORKDIR /code
 COPY . ./code
 
 # runs the production server
-ENTRYPOINT ["python", "code/worker2/manage.py"]
+ENTRYPOINT ["python", "code/fibonacci/manage.py"]
 CMD ["runserver", "0.0.0.0:8000"]

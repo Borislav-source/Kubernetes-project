@@ -1,5 +1,5 @@
 """
-URL configuration for worker2 project.
+URL configuration for fibonacci project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('worker2.fibonacci.urls')),
+    path('', include('fibonacci.app.urls')),
 ]
