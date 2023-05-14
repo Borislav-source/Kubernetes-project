@@ -15,7 +15,7 @@ before_install:
  - gclould config set compute/zone europe-west3-a
  - gclould container clusters get-credentials multi-cluster
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
- - docker build -t abadoom/worker-app-test -f ./Prime/Dockerfile.dev ./Prime
+ - docker build -t abadoom/worker-app-test -f ./Prime/Dockerfile_dev ./Prime
 
 script:
  - docker run abadoom/worker-app-test 
