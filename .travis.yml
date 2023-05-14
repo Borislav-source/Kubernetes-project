@@ -1,6 +1,4 @@
 sudo: required
-git:
-  depth: 250
 services:
  - docker
 env:
@@ -21,4 +19,3 @@ before_install:
 
 script:
  - docker run abadoom/worker-app-test
-test
