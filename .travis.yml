@@ -13,9 +13,9 @@ before_install:
  - gcloud auth activate-service-account --key-file service-account.json 
  - gcloud config set project kubernetes-386707
  - gcloud config set compute/zone europe-west3-a
- - gcloud container clusters get-credentials multi-cluster
+ - gcloud container clusters get-credentials multu-cluster
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
  - docker build -t abadoom/worker-app-test -f ./Prime/Dockerfile_dev ./Prime
 
 script:
- - docker run abadoom/worker-app-test 
+ - docker run abadoom/worker-app-test
