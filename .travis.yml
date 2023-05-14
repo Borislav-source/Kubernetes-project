@@ -19,9 +19,3 @@ before_install:
 
 script:
  - docker run abadoom/worker-app-test
- 
-#deploy:
-# provider: script
-# script: bash ./deploy.sh
-# on:
-#  branch: master
