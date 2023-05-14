@@ -1,4 +1,6 @@
 sudo: required
+git:
+  depth: 250
 services:
  - docker
 env:
