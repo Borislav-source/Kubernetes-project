@@ -19,3 +19,4 @@ before_install:
 
 script:
  - docker run abadoom/worker-app-test
+test
