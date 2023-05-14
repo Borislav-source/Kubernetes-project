@@ -8,6 +8,6 @@ docker push abadoom/worker1:$SHA
 docker push abadoom/worker2:$SHA
 docker push abadoom/router:$SHA
 kubectl apply -f k8s
-kubectl set image deployments/worker1-deployment server=abadoom/worker1:$SHA
-kubectl set image deployments/worker2-deployment server=abadoom/worker2:$SHA
-kubectl set image deployments/router-deployment server=abadoom/router:$SHA
+kubectl set image deployments/worker1-deployment worker1=abadoom/worker1:$SHA
+kubectl set image deployments/worker2-deployment worker2=abadoom/worker2:$SHA
+kubectl set image deployments/router-deployment router=abadoom/router:$SHA
